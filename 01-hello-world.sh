@@ -1,3 +1,4 @@
-this is about dotnet 
-dlssjk 
-ejflhfhlnlhf
+#!/bin/bash
+
+echo "hello, I am learning devops"
+
