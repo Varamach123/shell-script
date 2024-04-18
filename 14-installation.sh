@@ -11,8 +11,7 @@ N="\e[0M"
 
 
 VALIDATE(){
-
-    if [$1 -ne 0]
+if [ $1 -ne 0 ]
     then 
     echo -e "$2..... $R failure $N"
     exit 1
@@ -21,7 +20,7 @@ VALIDATE(){
     fi
 }
 
-if [$USERID -ne 0]
+if [ $USERID -ne 0 ]
 then 
 echo "you need to have root user access"
 exit 1
