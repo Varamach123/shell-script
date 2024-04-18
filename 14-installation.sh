@@ -33,7 +33,7 @@ for i in $@
 do 
 echo "install package $i"
 dnf list installed $i &>>$LOGFILE
-if [$? -eq 0]
+if [ $? -eq 0 ]
 then
  echo  -e "$1 is already installed ... $Y skipped $N"
 
@@ -42,8 +42,3 @@ dnf install $1 -y &>>$LOGFILE
 VALIDATE $? "installation of $i"
 fi 
 done
-
-
-
-
-
