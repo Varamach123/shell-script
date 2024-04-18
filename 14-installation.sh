@@ -4,10 +4,10 @@ USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%s)
 SCRIPTNAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
-R="\e[31M"
-G="\e[32M"
-Y="\e[33M"
-N="\e[0M"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 
 VALIDATE(){
@@ -34,7 +34,7 @@ echo "install package $i"
 dnf list installed $i &>>$LOGFILE
 if [ $? -eq 0 ]
 then
- echo  -e "$1 is already installed ... $Y skipped $N"
+ echo  -e "$1 is already installed ... $Y skipped $N "
 
 else 
 dnf install $1 -y &>>$LOGFILE
