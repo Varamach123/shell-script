@@ -39,7 +39,7 @@ then
 
 else 
 dnf install $1 -y &>>$LOGFILE
-VALIDATE $? installation of $i"
+VALIDATE $? "installation of $i"
 fi 
 done
 
