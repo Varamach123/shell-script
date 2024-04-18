@@ -1,9 +1,9 @@
 #!/bin/bash
 
-USERID=(id -u)
+USERID=$(id -u)
 TIMESTAMP=$(date +%F  -%H -%M -%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-LOGFILE=/temp/$SCRIPT_NAME-$TIMESTAMP.log
+LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 VALIDATE(){
 
     if [ $1 -ne 0 ]
@@ -16,7 +16,7 @@ VALIDATE(){
 }
 
 
-if  [$USERID -ne 0]
+if  [ $USERID -ne 0 ]
 then 
 echo "pls run the script with root user"
 exit 1
