@@ -9,8 +9,7 @@ USAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1)
 FOLDER=$(echo $line | awk -F " " '{ptint $NF}'
 if [ $USAGE -ge $DISK_THRSOLD ]
 then
- echo "$FOLDER is more than $DISK_THRSOLD, current usage: $USAGE"
+ echo " $FOLDER is more than $DISK_THRSOLD, current usage: $USAGE "
  fi
 done <<< $DISH_USAGE
 
-)
